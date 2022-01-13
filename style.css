@@ -1,0 +1,114 @@
+/* Global */
+:root {
+  /* Color */
+  --color-black: #3f454d;
+  --color-white: #ffffff;
+  --color-blue: #3b88c3;
+  --color-yellow: #fbbe28;
+  --color-pink: #fd7f84;
+  --color-light-grey: #dfdfdf;
+
+  /* Size */
+  --size-base-space: 8px;
+  --size-button-image: 60px;
+  --size-font: 18px;
+  --size-thumbnail: 50px;
+  --size-border-radius: 4px;
+
+  /* Animation */
+  --animation-duration: 300ms;
+}
+
+/* Universal */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  cursor: default;
+  background-color: var(--color-black);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Image */
+.logo {
+  cursor: pointer;
+  transition: transform var(--animation-duration) ease;
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  align-items: center;
+}
+
+.btn {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+  transition: transform var(--animation-duration) ease;
+  margin-right: var(--size-base-space);
+}
+
+.btn:hover,
+.logo:hover {
+  transform: scale(1.1);
+}
+
+.imgBtn {
+  width: var(--size-button-image);
+  height: var(--size-button-image);
+}
+
+.colorBtn {
+  font-size: var(--size-font);
+  padding: calc(var(--size-base-space) * 2);
+  border-radius: var(--size-border-radius);
+}
+
+.colorBtn.blue {
+  background-color: var(--color-blue);
+}
+
+.colorBtn.yellow {
+  background-color: var(--color-yellow);
+}
+
+.colorBtn.pink {
+  background-color: var(--color-pink);
+}
+
+/* Items */
+.items {
+  list-style: none;
+  padding-left: 0;
+  width: 60%;
+  height: 60%;
+  overflow-y: scroll;
+}
+
+.item {
+  background-color: var(--color-white);
+  display: flex;
+  align-items: center;
+  padding: var(--size-base-space);
+  border-radius: var(--size-border-radius);
+  margin-bottom: var(--size-base-space);
+}
+
+.item__thumbnail {
+  width: var(--size-thumbnail);
+  height: var(--size-thumbnail);
+}
+
+.item__description {
+  margin-left: var(--size-base-space);
+  font-size: var(--size-font);
+}
